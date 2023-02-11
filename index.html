@@ -18,6 +18,7 @@
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"
         ></script>
+
         <title>QR Code Generator</title>
         <!-- Poppins Font -->
         <link
@@ -40,6 +41,9 @@
             body {
                 font-family: "Poppins" !important;
             }
+            #spinner {
+                display: none;
+            }
         </style>
     </head>
     <body>
@@ -48,7 +52,7 @@
                 <div class="row">
                     <div class="col-sm-auto bg-light sticky-top">
                         <div
-                            class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top"
+                            class="d-flex min flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top"
                         >
                             <a
                                 href="/"
@@ -58,10 +62,16 @@
                                 data-bs-placement="right"
                                 data-bs-original-title="Icon-only"
                             >
-                                <i class="bi-bootstrap fs-1"></i>
+                                <img
+                                    src="img/Shark-Colours-Logo.png"
+                                    alt="Shark-Colours-Logo"
+                                    srcset=""
+                                    width="50rem"
+                                    height="50rem"
+                                />
                             </a>
                             <ul
-                                class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+                                class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mx-auto text-center align-items-center"
                             >
                                 <li class="nav-item">
                                     <a
@@ -70,9 +80,9 @@
                                         title=""
                                         data-bs-toggle="tooltip"
                                         data-bs-placement="right"
-                                        data-bs-original-title="Home"
+                                        data-bs-original-title="Url"
                                     >
-                                        <i class="bi-house fs-1"></i>
+                                        <i class="bi bi-link-45deg fs-3"></i>
                                     </a>
                                 </li>
                                 <li>
@@ -82,12 +92,12 @@
                                         title=""
                                         data-bs-toggle="tooltip"
                                         data-bs-placement="right"
-                                        data-bs-original-title="Dashboard"
+                                        data-bs-original-title="Text"
                                     >
-                                        <i class="bi-speedometer2 fs-1"></i>
+                                        <i class="bi bi-fonts fs-3"></i>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a
                                         href="#"
                                         class="nav-link py-3 px-2"
@@ -122,7 +132,7 @@
                                     >
                                         <i class="bi-people fs-1"></i>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                             <!-- <div class="dropdown">
                                 <a
@@ -157,8 +167,66 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="col-sm p-3 min-vh-100">
-                        <h1>Balabluu</h1>
+                    <div class="col-sm p-3 d-flex flex-column align-items-center">
+                        <form class="row g-3">
+                            <div class="mb-3 col-md-12">
+                                <label for="URL" class="form-label">Enter a URL</label>
+                                <input
+                                    type="url"
+                                    class="form-control"
+                                    id="URL"
+                                    placeholder="https://example.com"
+                                />
+                            </div>
+
+                            <div class="mb-3 col-md-12">
+                                <label for="size" class="form-label">Select Size</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="100x100">100x100</option>
+                                    <option value="200x200">200x200</option>
+                                    <option value="300x300" selected>300x300</option>
+                                    <option value="400x400">400x400</option>
+                                    <option value="500x500">500x500</option>
+                                    <option value="600x600">600x600</option>
+                                    <option value="700x700">700x700</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3 col-md-12">
+                                <label for="ColourInput" class="form-label">Pick Colour</label>
+                                <input
+                                    type="color"
+                                    class="form-control form-control-color"
+                                    id="ColourInput"
+                                    value="#000000"
+                                    title="Choose your colour"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm p-3 d-flex flex-column align-items-center card bg-primary">
+                        <form class="row g-3">
+                            <div id="qrcode" class="col-12 d-flex justify-content-center">
+                                <img
+                                    src="img/shark-qrcode.jpg"
+                                    alt="qrcode placeholder"
+                                    srcset=""
+                                    width="200rem"
+                                    height="200rem"
+                                />
+                            </div>
+                            <div id="spinner" class="col-12 d-flex justify-content-center">
+                                <img
+                                    src="img/spinner.gif"
+                                    alt="spinner"
+                                    srcset=""
+                                    width="200rem"
+                                    height="200rem"
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-dark">Generate QR-Code</button>
+                            <button type="submit" class="btn btn-light">Downloads QR-Code</button>
+                        </form>
                     </div>
                 </div>
             </div>
