@@ -24,6 +24,10 @@ updateCornerSquareStyle = () => {
 updateCornerSquareColour = () => {
   const CornerSquareColour = CornerSquareColourInput.value;
 };
+updateExtension = () => {
+  const extension = extensionInput.value;
+  console.log(extension);
+};
 
 // Get URL value
 let urlInput = document.getElementById("URL");
@@ -54,6 +58,8 @@ let CornerSquareColourInput = document.getElementById("CornerSquareColour");
 CornerSquareColourInput.onchange = updateCornerSquareColour;
 
 // Get extension value
+let extensionInput = document.getElementById("extension");
+extensionInput.onchange = updateExtension;
 
 const qrCode = new QRCodeStyling({
   width: 300,
