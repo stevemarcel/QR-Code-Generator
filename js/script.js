@@ -1,87 +1,102 @@
 const download = document.getElementById("download");
-const qr = document.getElementById("qrcode");
 
 // Update functions for form inputs
-updateURL = () => {
+updateFormValues = () => {
   const url = urlInput.value;
-};
-updateImg = () => {
-  const IMG = imgInput.value;
-  console.log(IMG);
-};
-updateSize = () => {
+  // const img = imgInput.value;
   const size = sizeInput.value;
-};
-updateDotStyle = () => {
   const DotStyle = DotStyleInput.value;
-};
-updateDotColour = () => {
   const DotColour = DotColourInput.value;
-};
-updateCornerSquareStyle = () => {
   const CornerSquareStyle = CornerSquareStyleInput.value;
-};
-updateCornerSquareColour = () => {
   const CornerSquareColour = CornerSquareColourInput.value;
-};
-updateExtension = () => {
   const extension = extensionInput.value;
-  console.log(extension);
+
+  const qr = document.getElementById("qrcode");
+  qr.innerHTML = "";
+  const qrCode = new QRCodeStyling({
+    width: size,
+    height: size,
+    type: "svg",
+    data: url,
+    // image: img,
+    dotsOptions: {
+      color: DotColour,
+      type: DotStyle,
+    },
+    cornersSquareOptions: {
+      color: CornerSquareColour,
+      type: CornerSquareStyle,
+    },
+    cornersDotOptions: {
+      color: CornerSquareColour,
+      type: CornerSquareStyle,
+    },
+    backgroundOptions: {
+      color: "#ffffff",
+    },
+    imageOptions: {
+      crossOrigin: "anonymous",
+      margin: 5,
+    },
+  });
+
+  // show QR code
+  qrCode.append(qr);
+  console.log("qrCode loaded");
 };
+
+document.addEventListener("DOMContentLoaded", updateFormValues);
 
 // Get URL value
 let urlInput = document.getElementById("URL");
-urlInput.onchange = updateURL;
+urlInput.onchange = updateFormValues;
 
-// Get IMG value
-let imgInput = document.getElementById("IMG");
-imgInput.onchange = updateImg;
+// // Get IMG value
+// let imgInput = document.getElementById("IMG");
+// imgInput.onchange = updateFormValues;
 
 // Get size value
 let sizeInput = document.getElementById("size");
-sizeInput.onchange = updateSize;
+sizeInput.onchange = updateFormValues;
 
 // Get DotStyle value
 let DotStyleInput = document.getElementById("DotStyle");
-DotStyleInput.onchange = updateDotStyle;
+DotStyleInput.onchange = updateFormValues;
 
 // Get DotColour value
 let DotColourInput = document.getElementById("DotColour");
-DotColourInput.onchange = updateDotColour;
+DotColourInput.onchange = updateFormValues;
 
 // Get CornerSquareStyle value
 let CornerSquareStyleInput = document.getElementById("CornerSquareStyle");
-CornerSquareStyleInput.onchange = updateCornerSquareStyle;
+CornerSquareStyleInput.onchange = updateFormValues;
 
 // Get CornerSquareColour value
 let CornerSquareColourInput = document.getElementById("CornerSquareColour");
-CornerSquareColourInput.onchange = updateCornerSquareColour;
+CornerSquareColourInput.onchange = updateFormValues;
 
 // Get extension value
 let extensionInput = document.getElementById("extension");
-extensionInput.onchange = updateExtension;
+extensionInput.onchange = updateFormValues;
 
-const qrCode = new QRCodeStyling({
-  width: 300,
-  height: 300,
-  type: "svg",
-  data: "https://www.facebook.com/",
-  image: "",
-  dotsOptions: {
-    color: "#4267b2",
-    type: "rounded",
-  },
-  backgroundOptions: {
-    color: "#e9ebee",
-  },
-  imageOptions: {
-    crossOrigin: "anonymous",
-    margin: 20,
-  },
-});
+// if (urlData && sizeData) {
+// }
 
-// show QR code
-qrCode.append(qr);
+// };
+// generateQR = (
+//   url,
+//   img,
+//   size,
+//   DotStyle,
+//   DotColour,
+//   CornerSquareStyle,
+//   CornerSquareColour,
+//   extension
+// ) => {
+
+// };
+
+// generateQR();
 
 // const downloadQrCode = (e) => {
 //   e.preventDefault();
