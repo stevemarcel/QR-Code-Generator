@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", updateFormValues);
 let urlInput = document.getElementById("URL");
 urlInput.onchange = updateFormValues;
 
-// // Get IMG value
+// Get IMG value
 // let imgInput = document.getElementById("IMG");
 // imgInput.onchange = updateFormValues;
 
@@ -78,29 +78,3 @@ CornerSquareColourInput.onchange = updateFormValues;
 // Get extension value
 let extensionInput = document.getElementById("extension");
 extensionInput.onchange = updateFormValues;
-
-// if (urlData && sizeData) {
-// }
-
-// };
-// generateQR = (
-//   url,
-//   img,
-//   size,
-//   DotStyle,
-//   DotColour,
-//   CornerSquareStyle,
-//   CornerSquareColour,
-//   extension
-// ) => {
-
-// };
-
-// generateQR();
-
-// const downloadQrCode = (e) => {
-//   e.preventDefault();
-//   qrCode.download({ name: "QRCODE", extension: "svg" });
-// };
-
-// download.addEventListener("click", downloadQrCode);
