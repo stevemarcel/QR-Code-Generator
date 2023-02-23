@@ -36,23 +36,22 @@
   </head>
   <body>
     <div class="custom-bg-sec vh-100">
-      <div class="container">
+      <div class="container d-flex vh-100 align-items-center">
         <div class="container-fluid">
           <div class="row p-3 d-flex align-items-center">
-            <div class="col-sm-auto sticky-top custom-bg-sec">
-              <div
-                class="d-flex min flex-sm-column flex-row flex-nowrap align-items-center sticky-top"
-              >
+            <div class="col-sm-auto sticky-top">
+              <div class="flex-sm-column flex-row flex-nowrap align-items-center sticky-top">
                 <a
                   href="/"
-                  class="d-block p-3 link-dark text-decoration-none bg-red"
+                  class="d-block p-3 link-dark text-decoration-none"
                   title=""
                   data-bs-toggle="tooltip"
                   data-bs-placement="right"
                   data-bs-original-title="Icon-only"
                 >
                   <img
-                    src="img/Shark-Colours-Logo.png"
+                    class="rounded-circle custom-bg-pry p-2"
+                    src="img/Shark-Colours-Logo-inverse.png"
                     alt="Shark-Colours-Logo"
                     srcset=""
                     width="80rem"
@@ -196,7 +195,7 @@
                 </div>
               </form>
             </div>
-            <div class="col-sm p-4 d-flex flex-column align-items-center card custom-bg-pry">
+            <div class="col-sm p-4 flex-column card custom-bg-pry">
               <form class="row g-3">
                 <div id="qrcode" class="mb-3 col-12 d-flex justify-content-center"></div>
 
@@ -210,7 +209,7 @@
                     <option value="svg">SVG</option>
                   </select>
                 </div>
-                <button id="qr-download" type="button" class="btn custom-bg-sec rounded-pill">
+                <button id="download" type="button" class="btn custom-bg-sec rounded-pill">
                   Downloads QR-Code
                 </button>
               </form>

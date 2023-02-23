@@ -1,4 +1,11 @@
+// Check if download type is empty
 const download = document.getElementById("download");
+download.addEventListener("click", checkDownloadType);
+function checkDownloadType(e) {
+  if (e.target.id === "download" && document.getElementById("extension").value === "Choose...") {
+    alert("Please select Download Type");
+  }
+}
 
 // Update functions for form inputs
 updateFormValues = () => {
@@ -9,7 +16,6 @@ updateFormValues = () => {
   const DotColour = DotColourInput.value;
   const CornerSquareStyle = CornerSquareStyleInput.value;
   const CornerSquareColour = CornerSquareColourInput.value;
-  const extension = extensionInput.value;
 
   const qr = document.getElementById("qrcode");
   qr.innerHTML = "";
@@ -43,6 +49,22 @@ updateFormValues = () => {
   // show QR code
   qrCode.append(qr);
   console.log("qrCode loaded");
+
+  // download QR code
+  chooseDownloadType = () => {
+    let extension = extensionInput.value;
+
+    const download = document.getElementById("download");
+    download.addEventListener("click", downloadQR);
+
+    function downloadQR(e) {
+      qrCode.download({ name: "qrCode", extension: extension });
+      location.reload();
+    }
+  };
+  // Get extension value
+  let extensionInput = document.getElementById("extension");
+  extensionInput.onchange = chooseDownloadType;
 };
 
 document.addEventListener("DOMContentLoaded", updateFormValues);
@@ -74,7 +96,3 @@ CornerSquareStyleInput.onchange = updateFormValues;
 // Get CornerSquareColour value
 let CornerSquareColourInput = document.getElementById("CornerSquareColour");
 CornerSquareColourInput.onchange = updateFormValues;
-
-// Get extension value
-let extensionInput = document.getElementById("extension");
-extensionInput.onchange = updateFormValues;
