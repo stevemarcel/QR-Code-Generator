@@ -11,3 +11,7 @@ body {
   background-color: #1d1918;
   color: aliceblue;
 }
+
+.custom-mt-10 {
+  margin-top: 10% !important;
+}
