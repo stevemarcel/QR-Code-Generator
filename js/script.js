@@ -42,6 +42,9 @@ updateQRCode = () => {
     backgroundOptions: {
       color: "#ffffff",
     },
+    qrOptions: {
+      errorCorrectionLevel: "H",
+    },
   });
 
   // show QR code
