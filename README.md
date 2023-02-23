@@ -4,7 +4,7 @@ This is a JavaScript project used to generate and download QR Codes. This projec
 
 The base code for the Qr code generating function was gotten from the repo: [oblakstudio/qr-code-styling][def2].
 
-[<img src="img/visibility.png" width="16" height="16" alt="QR Code Generator" /> Live Demo][def8]
+[<img src="img/eye.png" width="16" height="16" alt="QR Code Generator" /> Live Demo][def8]
 
 ## Tools
 
