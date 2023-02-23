@@ -1,14 +1,14 @@
-// Check if download type is empty
+// Send alert if download type is empty
 const download = document.getElementById("download");
 download.addEventListener("click", checkDownloadType);
 function checkDownloadType(e) {
   if (e.target.id === "download" && document.getElementById("extension").value === "Choose...") {
-    alert("Please select Download Type");
+    alert('Please select "Download type"');
   }
 }
 
 // Update functions for form inputs
-updateFormValues = () => {
+updateQRCode = () => {
   const url = urlInput.value;
   // const img = imgInput.value;
   const size = sizeInput.value;
@@ -19,6 +19,7 @@ updateFormValues = () => {
 
   const qr = document.getElementById("qrcode");
   qr.innerHTML = "";
+
   const qrCode = new QRCodeStyling({
     width: size,
     height: size,
@@ -48,7 +49,7 @@ updateFormValues = () => {
 
   // show QR code
   qrCode.append(qr);
-  console.log("qrCode loaded");
+  console.log("qrCode updated");
 
   // download QR code
   chooseDownloadType = () => {
@@ -62,37 +63,38 @@ updateFormValues = () => {
       location.reload();
     }
   };
+
   // Get extension value
   let extensionInput = document.getElementById("extension");
   extensionInput.onchange = chooseDownloadType;
 };
 
-document.addEventListener("DOMContentLoaded", updateFormValues);
+document.addEventListener("DOMContentLoaded", updateQRCode);
 
 // Get URL value
 let urlInput = document.getElementById("URL");
-urlInput.onchange = updateFormValues;
+urlInput.onchange = updateQRCode;
 
 // Get IMG value
 // let imgInput = document.getElementById("IMG");
-// imgInput.onchange = updateFormValues;
+// imgInput.onchange = updateQRCode;
 
 // Get size value
 let sizeInput = document.getElementById("size");
-sizeInput.onchange = updateFormValues;
+sizeInput.onchange = updateQRCode;
 
 // Get DotStyle value
 let DotStyleInput = document.getElementById("DotStyle");
-DotStyleInput.onchange = updateFormValues;
+DotStyleInput.onchange = updateQRCode;
 
 // Get DotColour value
 let DotColourInput = document.getElementById("DotColour");
-DotColourInput.onchange = updateFormValues;
+DotColourInput.onchange = updateQRCode;
 
 // Get CornerSquareStyle value
 let CornerSquareStyleInput = document.getElementById("CornerSquareStyle");
-CornerSquareStyleInput.onchange = updateFormValues;
+CornerSquareStyleInput.onchange = updateQRCode;
 
 // Get CornerSquareColour value
 let CornerSquareColourInput = document.getElementById("CornerSquareColour");
-CornerSquareColourInput.onchange = updateFormValues;
+CornerSquareColourInput.onchange = updateQRCode;
