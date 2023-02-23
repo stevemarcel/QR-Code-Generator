@@ -4,6 +4,16 @@ This is a JavaScript project that generates a QR Code as you make changes to the
 
 The base code for the Qr code generating function was gotten from the repo: [oblakstudio/qr-code-styling][def2].
 
+## Screenshots
+
+### Screenshot for desktop layout.
+
+![Desktop layout][def6]
+
+### Screenshot for mobile layout.
+
+![Desktop layout][def7]
+
 ## Acknowledgment
 
 Shoutout to [Brad Traversy][def3] and [Oblak Solutions][def4] for inspiration on this project.
@@ -17,3 +27,5 @@ Shoutout to [Brad Traversy][def3] and [Oblak Solutions][def4] for inspiration on
 [def3]: https://github.com/bradtraversy
 [def4]: https://github.com/oblakstudio
 [def5]: https://choosealicense.com/licenses/mit/
+[def6]: /img/QR-Code-Generator-site-DESKTOP.png
+[def7]: /img/QR-Code-Generator-site-MOBILE.png
