@@ -27,104 +27,102 @@
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <div class="custom-bg-sec vh-100">
-      <div class="container">
-        <div class="container-fluid">
-          <div class="row p-3 d-flex vh-100 align-items-center">
-            <div class="col-sm-auto sticky-top custom-bg-sec">
-              <div class="flex-sm-column flex-row flex-nowrap align-items-center sticky-top">
-                <a
-                  href="/"
-                  class="d-block p-3 link-dark text-decoration-none"
-                  title=""
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="right"
-                  data-bs-original-title="Icon-only"
-                >
-                  <img
-                    class="rounded-circle custom-bg-pry p-2"
-                    src="img/Shark-Colours-Logo-inverse.png"
-                    alt="Shark-Colours-Logo"
-                    srcset=""
-                    width="80rem"
-                    height="80rem"
-                  />
-                </a>
-              </div>
+  <body class="custom-bg-sec">
+    <div class="container">
+      <div class="container-fluid">
+        <div class="row p-3 d-flex vh-100 align-items-center">
+          <div class="col-sm-auto sticky-top custom-bg-sec">
+            <div class="flex-sm-column flex-row flex-nowrap align-items-center sticky-top">
+              <a
+                href="/"
+                class="d-block p-3 link-dark text-decoration-none"
+                title=""
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                data-bs-original-title="Icon-only"
+              >
+                <img
+                  class="rounded-circle custom-bg-pry p-2"
+                  src="img/Shark-Colours-Logo-inverse.png"
+                  alt="Shark-Colours-Logo"
+                  srcset=""
+                  width="80rem"
+                  height="80rem"
+                />
+              </a>
             </div>
-            <div class="col-sm p-3 d-flex flex-column align-items-center">
-              <form id="form" class="row g-3">
-                <div class="mb-3 col-md-12">
-                  <label for="URL" class="form-label">Enter a URL or plain text</label>
-                  <input type="url" class="form-control" id="URL" placeholder="https://example.com" value="https://www.google.com" />
-                </div>
+          </div>
+          <div class="col-sm p-3 d-flex flex-column align-items-center">
+            <form id="form" class="row g-3">
+              <div class="mb-3 col-md-12">
+                <label for="URL" class="form-label">Enter a URL or plain text</label>
+                <input type="url" class="form-control" id="URL" placeholder="https://example.com" value="https://www.google.com" />
+              </div>
 
-                <!-- for image upload -->
-                <!-- <div class="mb-3 col-md-12">
+              <!-- for image upload -->
+              <!-- <div class="mb-3 col-md-12">
                   <label for="IMG" class="form-label">Upload Logo</label>
                   <input type="file" class="form-control" id="IMG" />
                 </div> -->
 
-                <div class="mb-3 col-md-12">
-                  <label for="size" class="form-label">Select Size</label>
-                  <select id="size" class="form-select" aria-label="Default select example">
-                    <option value="100">100x100</option>
-                    <option value="200">200x200</option>
-                    <option value="300" selected>300x300</option>
-                    <option value="400">400x400</option>
-                    <option value="500">500x500</option>
-                  </select>
-                </div>
+              <div class="mb-3 col-md-12">
+                <label for="size" class="form-label">Select Size</label>
+                <select id="size" class="form-select" aria-label="Default select example">
+                  <option value="100">100x100</option>
+                  <option value="200">200x200</option>
+                  <option value="300" selected>300x300</option>
+                  <option value="400">400x400</option>
+                  <option value="500">500x500</option>
+                </select>
+              </div>
 
-                <div class="mb-3 col-6">
-                  <label for="DotStyle" class="form-label">Select Dot Style</label>
-                  <select id="DotStyle" class="form-select" aria-label="Default select example">
-                    <option value="" selected>Select</option>
-                    <option value="square">Square</option>
-                    <option value="dots">Circle</option>
-                  </select>
-                </div>
-                <div class="mb-3 col-6">
-                  <label for="DotColour" class="form-label">Pick Dot Colour</label>
-                  <input type="color" class="form-control form-control-color" id="DotColour" value="#202f66" title="Choose your colour" />
-                </div>
+              <div class="mb-3 col-6">
+                <label for="DotStyle" class="form-label">Select Dot Style</label>
+                <select id="DotStyle" class="form-select" aria-label="Default select example">
+                  <option value="" selected>Select</option>
+                  <option value="square">Square</option>
+                  <option value="dots">Circle</option>
+                </select>
+              </div>
+              <div class="mb-3 col-6">
+                <label for="DotColour" class="form-label">Pick Dot Colour</label>
+                <input type="color" class="form-control form-control-color" id="DotColour" value="#202f66" title="Choose your colour" />
+              </div>
 
-                <div class="mb-3 col-6">
-                  <label for="CornerSquareStyle" class="form-label">Select Corner Style</label>
-                  <select id="CornerSquareStyle" class="form-select" aria-label="Default select example">
-                    <option value="" selected>Select</option>
-                    <option value="square">Square</option>
-                    <option value="dots">Circle</option>
-                  </select>
-                </div>
-                <div class="mb-3 col-6">
-                  <label for="CornerSquareColour" class="form-label">Pick Corner Colour</label>
-                  <input
-                    type="color"
-                    class="form-control form-control-color"
-                    id="CornerSquareColour"
-                    value="#202f66"
-                    title="Choose your colour"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="col-sm p-4 flex-column card custom-bg-pry">
-              <form class="row g-3">
-                <div id="qrcode" class="mb-3 col-12 d-flex justify-content-center"></div>
+              <div class="mb-3 col-6">
+                <label for="CornerSquareStyle" class="form-label">Select Corner Style</label>
+                <select id="CornerSquareStyle" class="form-select" aria-label="Default select example">
+                  <option value="" selected>Select</option>
+                  <option value="square">Square</option>
+                  <option value="dots">Circle</option>
+                </select>
+              </div>
+              <div class="mb-3 col-6">
+                <label for="CornerSquareColour" class="form-label">Pick Corner Colour</label>
+                <input
+                  type="color"
+                  class="form-control form-control-color"
+                  id="CornerSquareColour"
+                  value="#202f66"
+                  title="Choose your colour"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="col-sm p-4 flex-column card custom-bg-pry">
+            <form class="row g-3">
+              <div id="qrcode" class="mb-3 col-12 d-flex justify-content-center"></div>
 
-                <div class="input-group mb-3">
-                  <label class="input-group-text custom-bg-dark" for="extension">Download type</label>
-                  <select class="form-select" id="extension">
-                    <option selected>Choose...</option>
-                    <option value="jpeg">Image</option>
-                    <option value="svg">SVG</option>
-                  </select>
-                </div>
-                <button id="download" type="button" class="btn custom-bg-sec rounded-pill">Downloads QR-Code</button>
-              </form>
-            </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text custom-bg-dark" for="extension">Download type</label>
+                <select class="form-select" id="extension">
+                  <option selected>Choose...</option>
+                  <option value="jpeg">Image</option>
+                  <option value="svg">SVG</option>
+                </select>
+              </div>
+              <button id="download" type="button" class="btn custom-bg-sec rounded-pill">Downloads QR-Code</button>
+            </form>
           </div>
         </div>
       </div>
