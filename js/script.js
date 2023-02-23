@@ -26,6 +26,7 @@ updateQRCode = () => {
     type: "svg",
     data: url,
     // image: img,
+    margin: 20,
     dotsOptions: {
       color: DotColour,
       type: DotStyle,
@@ -40,10 +41,6 @@ updateQRCode = () => {
     },
     backgroundOptions: {
       color: "#ffffff",
-    },
-    imageOptions: {
-      crossOrigin: "anonymous",
-      margin: 20,
     },
   });
 
