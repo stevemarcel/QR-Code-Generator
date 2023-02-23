@@ -26,7 +26,7 @@ updateQRCode = () => {
     type: "svg",
     data: url,
     // image: img,
-    margin: 20,
+    margin: 30,
     dotsOptions: {
       color: DotColour,
       type: DotStyle,
