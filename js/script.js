@@ -43,7 +43,7 @@ updateQRCode = () => {
     },
     imageOptions: {
       crossOrigin: "anonymous",
-      margin: 5,
+      margin: 20,
     },
   });
 
